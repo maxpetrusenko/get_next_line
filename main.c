@@ -6,7 +6,7 @@
 /*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 14:25:09 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/07/06 14:25:13 by mpetruse         ###   ########.fr       */
+/*   Updated: 2018/07/06 18:21:44 by mpetruse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int	main(int ac, char **av)
 		printf("%s\n", line);
 		free(line);
 	}
-	while (1);
 	return (0);
 }
