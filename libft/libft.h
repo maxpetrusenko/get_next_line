@@ -88,6 +88,7 @@ void				ft_putnstr_fd(char const *s, size_t strlen, int fd);
 void				ft_putwstr_fd(wchar_t const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+char				*ft_strmerge(char *s1, char *s2);
 
 typedef struct		s_list
 {

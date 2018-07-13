@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmerge.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/06 14:25:09 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/07/06 18:21:44 by mpetruse         ###   ########.fr       */
+/*   Created: 2018/07/09 21:14:23 by mpetruse          #+#    #+#             */
+/*   Updated: 2018/07/09 21:14:41 by mpetruse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "get_next_line.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+char		*ft_strmerge(char *s1, char *s2)
 {
-	char	*line;
-	int		fd;
+	char		*res;
 
-	if (ac < 2)
-		return (0);
-	fd = open(av[1], O_RDONLY);
-	while (get_next_line(fd, &line) == 1)
-	{
-		printf("%s\n", line);
-		free(line);
-	}
-	return (0);
+	res = ft_strjoin(s1, s2);
+	ft_strdel(&s1);
+	ft_strdel(&s2);
+	return (res);
 }
