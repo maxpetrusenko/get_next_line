@@ -6,7 +6,7 @@
 /*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 22:23:56 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/07/12 22:23:57 by mpetruse         ###   ########.fr       */
+/*   Updated: 2018/07/13 10:09:58 by mpetruse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static	int	ft_read(int fd, char **line)
 	char		*tmp;
 	int			i;
 
-	buf = ft_memalloc(BUFF_SIZE + 1);
-	while ((i = (read(fd, buf, BUFF_SIZE))) > 0)
+	buf = ft_strnew(BUFF_SIZE);
+	while ((i = read(fd, buf, BUFF_SIZE)) > 0)
 	{
 		if (!line[fd])
 		{
